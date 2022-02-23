@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  /* background, headings, buttons  */
+  --very-ligh-gray: hsl(0, 0%, 95%);
+  /* paragraphs */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  background-color: var(--transparent-white);
+  font-size: 15px;
+  display: flex;
+  color: var(--very-ligh-gray);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  margin: 0 auto;
+  padding: 5rem 18rem 5rem 18rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 3rem;
+}
+
+.Sedans {
+  background: var(--bright-orange);
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.Sedans img,
+.SUVs img,
+.Luxury img {
+  margin: 1.5rem;
+  padding: 0 1.5rem;
+  width: 120px;
+  margin-top: 4rem;
+}
+
+.Sedans h1,
+.SUVs h1,
+.Luxury h1 {
+  padding: 0.5rem 2rem;
+  margin: 0.5rem 1.5rem;
+}
+
+.Sedans p,
+.SUVs p,
+.Luxury p {
+  padding: 0 2rem 2rem 2rem;
+  margin: 1rem 1.5rem;
+  font-size: 15px;
+  color: var(--transparent-white);
+}
+.Sedans button,
+.SUVs button,
+.Luxury button {
+  padding: 0 1rem;
+  margin-top: 4rem;
+  margin: 2rem 3rem 3rem;
+  justify-content: center;
+  text-align: center;
+}
+.Sedans button {
+  border: 2px solid var(--bright-orange);
+  color: var(--bright-orange);
+}
+.SUVs button {
+  border: 2px solid var(--dark-cyan);
+  color: var(--dark-cyan);
+}
+.Luxury button {
+  border: 2px solid var(--very-dark-cyan);
+  color: var(--very-dark-cyan);
+}
+.SUVs {
+  background: var(--dark-cyan);
+}
+
+.Luxury {
+  background: var(--very-dark-cyan);
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+.container button {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+  background: white;
+  font-size: 15px;
+}
+.container button:hover,
+.container button::after {
+  background: transparent;
+  cursor: pointer;
+  color: var(--very-ligh-gray);
+  border: 2px solid var(--very-ligh-gray);
+}
+
+@media (max-width: 60rem) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 10rem;
+    margin: 0;
+  }
+  .Sedans button,
+  .SUVs button,
+  .Luxury button {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 45rem) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 3rem;
+    margin: 0;
+  }
+  .Sedans button,
+  .SUVs button,
+  .Luxury button {
+    margin-top: 0;
+  }
+  .Sedans p,
+  .SUVs p,
+  .Luxury p {
+    margin-top: 0;
+  }
+}
